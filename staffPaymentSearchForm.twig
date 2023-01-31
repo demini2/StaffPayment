@@ -1,0 +1,37 @@
+{{ form_start(staffPaymentSearchForm, {attr: {class: 'form-inline'}}) }}
+{{ form_errors(staffPaymentSearchForm) }}
+<div class="collapse mt-30" id="staffPaymentSearchForm">
+    <div class="row search">
+        <div class="col-lg-4 col-12 mb-2">
+            <label for="{{ staffPaymentSearchForm.loanId.vars.id }}">{{ staffPaymentSearchForm.loanId.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.loanId, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-lg-4 col-12 mb-2">
+            <label for="{{ staffPaymentSearchForm.type.vars.id }}">{{ staffPaymentSearchForm.type.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.type, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-lg-4 col-12 mb-2">
+            <label for="{{ staffPaymentSearchForm.destination.vars.id }}">{{ staffPaymentSearchForm.destination.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.destination, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-lg-4 col-12">
+            <label for="{{ staffPaymentSearchForm.sum.vars.id }}">{{ staffPaymentSearchForm.sum.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.sum, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-lg-4 col-12">
+            <label for="{{ staffPaymentSearchForm.paymentDate.vars.id }}">{{ staffPaymentSearchForm.paymentDate.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.paymentDate, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-lg-4 col-12">
+            <label for="{{ staffPaymentSearchForm.staffId.vars.id }}">{{ staffPaymentSearchForm.staffId.vars.label }}</label>
+            {{ form_widget(staffPaymentSearchForm.staffId, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+    <div class="row justify-content-md-center mt-20">
+        <div class="col-md-auto">
+            <button class="btn btn-primary" id="btn-search">{{ button_label|default('Найти') }}</button>
+        </div>
+    </div>
+</div>
+{{ form_end(staffPaymentSearchForm) }}
+<br/>
